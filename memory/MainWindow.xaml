@@ -1,0 +1,34 @@
+﻿<Window x:Class="memory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:memory.Views"
+        WindowState="Maximized"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700" Height="650"/>
+        <WrapPanel Grid.Row="1" Orientation="Horizontal" x:Name="blibli" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700" Height="650"/>
+        <Grid x:Name="perdu" Background="Red" Opacity="0.5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700" Height="650">
+            <Label Content="Perdu" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Lato" FontSize="80"/>
+        </Grid>
+        <Grid x:Name="gagne" Background="Green" Opacity="0.5" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700" Height="650">
+            <Label Content="Gagné" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Lato" FontSize="80"/>
+        </Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <Label Content="Score :" FontSize="40" FontFamily="Lato"/>
+            <Label FontSize="40" FontFamily="Lato" x:Name="score"/>
+            <Label Content="Temps :" FontSize="40" FontFamily="Lato"/>
+            <Label FontSize="40" FontFamily="Lato" x:Name="temps"/>
+        </StackPanel>   
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" Margin="10">
+            <Viewbox>
+            <Button Content="recommencer" Click="Button_Click" />
+            </Viewbox>
+        </StackPanel>
+    </Grid>
+</Window>
